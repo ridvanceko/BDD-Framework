@@ -28,7 +28,7 @@ public class EtsySearchSteps {
 
     @After
     public void afterScenario(Scenario scenario){
-        // It will run after each scnario
+        // It will run after each scenario
         System.out.println("After Annotation.");
 
         if(scenario.isFailed()){
@@ -50,7 +50,7 @@ public class EtsySearchSteps {
     @Given("the user navigates to {string}")
     public void the_user_navigates_to(String url) {
        driver= Driver.getDriver();
-       driver.get(url);
+       driver.get(url);  // url parameter comes from Cucumber feature file "etsy.com"
     }
     @When("the user search with {string}")
     public void the_user_search_with(String searchValue) {
